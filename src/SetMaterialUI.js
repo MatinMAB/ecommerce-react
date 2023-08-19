@@ -12,6 +12,8 @@ function MaterialUI({ children }) {
       fontWeightMedium: 500,
       fontWeightBold: 700,
     },
+    direction: 'rtl',
+
   });
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
