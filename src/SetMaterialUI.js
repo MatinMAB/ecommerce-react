@@ -1,7 +1,20 @@
-import { ThemeProvider, createTheme } from "@mui/material";
 import React from "react";
 
+//Material Ui
+import rtlPlugin from "stylis-plugin-rtl";
+import createCache from "@emotion/cache";
+import { ThemeProvider, createTheme } from "@mui/material";
+import { CacheProvider } from "@emotion/react";
+import { prefixer } from "stylis";
+
 function MaterialUI({ children }) {
+  // Create rtl cache
+  const cacheRtl = createCache({
+    key: "muirtl",
+    stylisPlugins: [prefixer, rtlPlugin],
+  });
+
+  // Create theme
   const theme = createTheme({
     typography: {
       fontFamily: "Vazir",
@@ -12,10 +25,24 @@ function MaterialUI({ children }) {
       fontWeightMedium: 500,
       fontWeightBold: 700,
     },
-    direction: 'rtl',
-
+    palette: {
+      primary: {
+        main: "#71008E",
+      },
+      secondary: {
+        main: "#EF7889",
+      },
+      light: {
+        main: "#ffffff",
+      },
+    },
   });
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  
+  return (
+    <ThemeProvider theme={theme}>
+      <CacheProvider value={cacheRtl}>{children}</CacheProvider>
+    </ThemeProvider>
+  );
 }
 
 export default MaterialUI;

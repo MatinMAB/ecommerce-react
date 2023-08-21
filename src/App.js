@@ -1,9 +1,12 @@
+import Navbar from "./Components/Shared/Navbar/Navbar.jsx"
 import MaterialUI from "./SetMaterialUI";
 
 function App() {
   return (
     <>
-      <MaterialUI></MaterialUI>
+      <MaterialUI>
+        <Navbar/>
+      </MaterialUI>
     </>
   );
 }
