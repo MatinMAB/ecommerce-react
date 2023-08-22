@@ -11,7 +11,7 @@ import BottomNav from "./BottomNavigation";
 function Navbar() {
   return (
     <header>
-      <AppBar color="light" sx={{py : 1}}>
+      <AppBar color="light" sx={{py : 1}} position="static">
         <Container maxWidth="xl">
           <TopNav />
           <BottomNav/>

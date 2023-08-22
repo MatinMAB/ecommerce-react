@@ -1,0 +1,324 @@
+.slider {
+  max-width: 1968px;
+  text-align: center;
+  margin: 0 auto;
+}
+.firstPaper .box,
+.secondPaper .box,
+.thirdPaper .box,
+.fourthPaper .box {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 33%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+/* FirstPaper
+////////////////////////////////
+////////////////////////////////
+////////////////////////////////
+//////////////////////////////// */
+
+.firstPaper .box:nth-child(1) {
+  background-image: url("../../images/Iphone.jpg");
+}
+.firstPaper .box:nth-child(2) {
+  background-image: url("../../images/mac.jpg");
+}
+.firstPaper .box:nth-child(3) {
+  background-image: linear-gradient(
+    123deg,
+    rgba(113, 0, 142, 1) 0%,
+    rgba(239, 120, 137, 1) 50%
+  );
+  position: relative;
+}
+.firstPaper .box:nth-child(3) div {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+}
+.firstPaper .box:nth-child(3) div h2 {
+  font-weight: 700;
+  font-size: 46px;
+}
+.firstPaper .box:nth-child(3) div p {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.box:nth-child(2) {
+  width: 34%;
+}
+.firstPaper .btn {
+  cursor: pointer;
+  width: 100%;
+  height: 100px;
+  border: none;
+  transition: background-color ease-in-out 0.3s;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.453);
+  font-size: 22px;
+  font-family: Vazir;
+  font-weight: bold;
+}
+.firstPaper .iphoneBtn {
+  background-color: #5d3b225d;
+}
+.firstPaper .iphoneBtn:hover {
+  background-color: #4b2f1baf;
+}
+.firstPaper .macBtn {
+  background-color: #9099a25d;
+}
+.firstPaper .macBtn:hover {
+  background-color: #898d9095;
+}
+.firstPaper .colorfulBtn {
+  background-color: rgba(114, 0, 142, 0.292);
+}
+.firstPaper .colorfulBtn:hover {
+  background-color: rgba(114, 0, 142, 0.429);
+}
+
+/* SecondPaper
+////////////////////////////////
+////////////////////////////////
+////////////////////////////////
+//////////////////////////////// */
+
+.secondPaper .box:nth-child(1) {
+  background-image: linear-gradient(
+    203deg,
+    rgba(113, 0, 142, 1) 0%,
+    rgba(239, 120, 137, 1) 50%
+  );
+  position: relative;
+}
+.secondPaper .box:nth-child(2) {
+  background-image: url("../../images/clothes2.jpg");
+}
+.secondPaper .box:nth-child(3) {
+  background-image: url("../../images/clothes1.jpg");
+}
+.secondPaper .box:nth-child(1) div {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+}
+.secondPaper .box:nth-child(1) div h2 {
+  font-weight: 700;
+  font-size: 46px;
+}
+.secondPaper .box:nth-child(1) div p {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.secondPaper .btn {
+  cursor: pointer;
+  width: 100%;
+  height: 100px;
+  border: none;
+  transition: background-color ease-in-out 0.3s;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.453);
+  font-size: 22px;
+  font-family: vazir;
+}
+.secondPaper .menBtn {
+  background-color: #5d3b225d;
+}
+.secondPaper .menBtn:hover {
+  background-color: #4b2f1b75;
+}
+.secondPaper .womenBtn {
+  background-color: #9099a25d;
+}
+.secondPaper .womenBtn:hover {
+  background-color: #898d9081;
+}
+.secondPaper .colorfulBtn {
+  background-color: rgba(114, 0, 142, 0.292);
+}
+.secondPaper .colorfulBtn:hover {
+  background-color: rgba(114, 0, 142, 0.429);
+}
+
+/* ThirdPaper
+////////////////////////////////
+////////////////////////////////
+////////////////////////////////
+//////////////////////////////// */
+
+.thirdPaper .box:nth-child(1) {
+  background-image: url("../../images/accessory1.jpg");
+}
+.thirdPaper .box:nth-child(2) {
+  background-image: linear-gradient(
+    180deg,
+    rgba(113, 0, 142, 1) 0%,
+    rgba(239, 120, 137, 1) 50%
+  );
+  position: relative;
+}
+.thirdPaper .box:nth-child(3) {
+  background-image: url("../../images/accessory2.jpg");
+}
+.thirdPaper .box:nth-child(2) div {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+}
+.thirdPaper .box:nth-child(2) div h2 {
+  font-weight: 700;
+  font-size: 46px;
+}
+.thirdPaper .box:nth-child(2) div p {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.thirdPaper .btn {
+  cursor: pointer;
+  width: 100%;
+  height: 100px;
+  border: none;
+  transition: background-color ease-in-out 0.3s;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.453);
+  font-size: 22px;
+  font-family: vazir;
+}
+.thirdPaper .necklaceBtn {
+  background-color: #9099a25d;
+}
+.thirdPaper .necklaceBtn:hover {
+  background-color: #898d9081;
+}
+.thirdPaper .ornamentsBtn {
+  background-color: #855678a1;
+}
+.thirdPaper .ornamentsBtn:hover {
+  background-color: #855678c6;
+}
+.thirdPaper .colorfulBtn {
+  background-color: rgba(114, 0, 142, 0.292);
+}
+.thirdPaper .colorfulBtn:hover {
+  background-color: rgba(114, 0, 142, 0.429);
+}
+
+/* FourthPaper 
+////////////////////////////////
+////////////////////////////////
+////////////////////////////////
+//////////////////////////////// */
+
+.fourthPaper .box:nth-child(1) {
+  background-image: url("../../images/watch1.jpg");
+}
+.fourthPaper .box:nth-child(2) {
+  background-image: linear-gradient(
+    180deg,
+    rgba(113, 0, 142, 1) 0%,
+    rgba(239, 120, 137, 1) 50%
+  );
+  position: relative;
+}
+.fourthPaper .box:nth-child(3) {
+  background-image: url("../../images/watch2.jpg");
+}
+.fourthPaper .box:nth-child(2) div {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+}
+.fourthPaper .box:nth-child(2) div h2 {
+  font-weight: 700;
+  font-size: 46px;
+}
+.fourthPaper .box:nth-child(2) div p {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.fourthPaper .btn {
+  cursor: pointer;
+  width: 100%;
+  height: 100px;
+  border: none;
+  transition: background-color ease-in-out 0.3s;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.453);
+  font-size: 22px;
+  font-family: vazir;
+}
+.fourthPaper .fossilWhiteBGBtn {
+  background-color: #c69a5d47;
+}
+.fourthPaper .fossilWhiteBGBtn:hover {
+  background-color: #c69a5d62;
+}
+.fourthPaper .fossilBrownBGBtn {
+  background-color: #8b442a65;
+}
+.fourthPaper .fossilBrownBGBtn:hover {
+  background-color: #8b442a90;
+}
+.fourthPaper .colorfulBtn {
+  background-color: rgba(114, 0, 142, 0.292);
+}
+.fourthPaper .colorfulBtn:hover {
+  background-color: rgba(114, 0, 142, 0.429);
+}
+
+/* Media Queries
+////////////////////////////////
+////////////////////////////////
+////////////////////////////////
+//////////////////////////////// */
+
+@media screen and (max-width: 1000px) {
+  [class*="Paper"] .box div h2 {
+    font-size: 26px !important;
+  }
+  [class*="Paper"] .box div p {
+    font-size: 14px !important;
+  }
+  [class*="Paper"] .btn {
+    font-size: 14px !important;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .firstPaper,
+  .secondPaper,
+  .thirdPaper,
+  .fourthPaper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .firstPaper .box,
+  .secondPaper .box,
+  .thirdPaper .box,
+  .fourthPaper .box {
+    width: 100% !important;
+    height: 300px;
+  }
+}

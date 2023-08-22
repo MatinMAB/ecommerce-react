@@ -1,3 +1,4 @@
+import Carousel from "./Components/Carousel/CarouselComponent.jsx";
 import Navbar from "./Components/Shared/Navbar/Navbar.jsx"
 import MaterialUI from "./SetMaterialUI";
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <MaterialUI>
         <Navbar/>
+        <Carousel/>
       </MaterialUI>
     </>
   );

@@ -25,7 +25,7 @@ function TopNavigation() {
               justifyContent: "center",
             }}
           >
-            <img style={{ width: "60px" }} src={logo} alt="logo" />
+            <img style={{ width: "70px" }} src={logo} alt="logo" />
           </Box>
         </Grid>
         <Grid item xs={6} md={8}>
