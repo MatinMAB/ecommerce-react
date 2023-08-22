@@ -19,7 +19,7 @@ function CarouselComponent() {
         sx={{
           boxShadow: "inset 0 0.3em 1.2em -1em #757575",
         }}
-        interval={7000}
+        interval={5000}
         fullHeightHover={true}
         navButtonsProps={{
           style: {
