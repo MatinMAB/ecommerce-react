@@ -1,0 +1,14 @@
+.categoryListItem {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px;
+  cursor: pointer;
+}
+.categoryListItem span {
+  color: #6e6e6e;
+}
+
+.categoryHamburgerMenu {
+  list-style-type: none;
+}

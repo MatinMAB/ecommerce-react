@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Vazir";
+  font-weight: 100;
+  src: "../public/fonts/Vazir-Thin-FD-WOL.eot";
+  src: url("../public/fonts/Vazir-Thin-FD-WOL.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Vazir-Thin-FD-WOL.ttf") format("truetype"),
+    url("../public/fonts/Vazir-Thin-FD-WOL.woff") format("woff"),
+    url("../public/fonts/Vazir-Thin-FD-WOL.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Vazir";
+  font-weight: 300;
+  src: "../public/fonts/Vazir-Light-FD-WOL.eot";
+  src: url("../public/fonts/Vazir-Light-FD-WOL.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Vazir-Light-FD-WOL.ttf") format("truetype"),
+    url("../public/fonts/Vazir-Light-FD-WOL.woff") format("woff"),
+    url("../public/fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Vazir";
+  font-weight: 400;
+  src: "../public/fonts/Vazir-FD-WOL.eot";
+  src: url("../public/fonts/Vazir-FD-WOL.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Vazir-FD-WOL.ttf") format("truetype"),
+    url("../public/fonts/Vazir-FD-WOL.woff") format("woff"),
+    url("../public/fonts/Vazir-FD-WOL.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Vazir";
+  font-weight: 500;
+  src: "../public/fonts/Vazir-Medium-FD-WOL.eot";
+  src: url("../public/fonts/Vazir-Medium-FD-WOL.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Vazir-Medium-FD-WOL.ttf") format("truetype"),
+    url("../public/fonts/Vazir-Medium-FD-WOL.woff") format("woff"),
+    url("../public/fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Vazir";
+  font-weight: 700;
+  src: "../public/fonts/Vazir-Bold-FD-WOL.eot";
+  src: url("../public/fonts/Vazir-Bold-FD-WOL.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/Vazir-Bold-FD-WOL.ttf") format("truetype"),
+    url("../public/fonts/Vazir-Bold-FD-WOL.woff") format("woff"),
+    url("../public/fonts/Vazir-Bold-FD-WOL.woff2") format("woff2");
+}
