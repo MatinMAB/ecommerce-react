@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+
+//Material Ui components
 import Container from "@mui/material/Container";
-import { Grid, Typography } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { Grid, Typography } from "@mui/material";
 
 //images
 import ShopJet from "../../images//SiteOptions/Shop-Jet.png";
@@ -12,185 +14,41 @@ import HarajStyle from "../../images/SiteOptions/Haraj-Style.png";
 import Game from "../../images/SiteOptions/game.png";
 import Coupon from "../../images/SiteOptions/coupon.png";
 
+//Components
+import MoreOptionsModal from "./MoreOptionsModal";
+import Option from "./Option";
+
 function SiteOptions() {
+  const [isOpen, setIsOpen] = useState("");
+
+  const handleClickOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Container maxWidth="xl">
       <Grid container spacing={2} sx={{ mt: 2 }}>
-        <Grid
-          item
-          xs={4}
-          sm={3}
-          md={1.5}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={ShopJet}
-            alt="Shop-jet"
-            style={{ width: "33%", cursor: "pointer" }}
-          />
-          <Typography
-            variant="subtitle1"
-            color="initial"
-            sx={{ fontWeight: "bold", fontSize: "12px", mt: 1 }}
-          >
-            فروشگاه جت
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={4}
-          sm={3}
-          md={1.5}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={HarajStyle}
-            alt="haraj-style"
-            style={{ width: "33%", cursor: "pointer" }}
-          />
-          <Typography
-            variant="subtitle1"
-            color="initial"
-            sx={{ fontWeight: "bold", fontSize: "12px", mt: 1 }}
-          >
-            حراج استایل
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={4}
-          sm={3}
-          md={1.5}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={ShopPay}
-            alt="Shop-pay"
-            style={{ width: "33%", cursor: "pointer" }}
-          />
-          <Typography
-            variant="subtitle1"
-            color="initial"
-            sx={{ fontWeight: "bold", fontSize: "12px", mt: 1 }}
-          >
-            شاپ پی
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={4}
-          sm={3}
-          md={1.5}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={Total}
-            alt="total"
-            style={{ width: "33%", cursor: "pointer" }}
-          />
-          <Typography
-            variant="subtitle1"
-            color="initial"
-            sx={{ fontWeight: "bold", fontSize: "12px", mt: 1 }}
-          >
-            خرید عمده
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={4}
-          sm={3}
-          md={1.5}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={Coupon}
-            alt="coupon"
-            style={{ width: "33%", cursor: "pointer" }}
-          />
-          <Typography
-            variant="subtitle1"
-            color="initial"
-            sx={{ fontWeight: "bold", fontSize: "12px", mt: 1 }}
-          >
-            کوله پر تخفیف
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={4}
-          sm={3}
-          md={1.5}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={Game}
-            alt="game-net"
-            style={{ width: "33%", cursor: "pointer" }}
-          />
-          <Typography
-            variant="subtitle1"
-            color="initial"
-            sx={{ fontWeight: "bold", fontSize: "12px", mt: 1 }}
-          >
-            گیم نت
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={4}
-          sm={3}
-          md={1.5}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={Truck}
-            alt="sending-truck"
-            style={{ width: "33%", cursor: "pointer" }}
-          />
-          <Typography
-            variant="subtitle1"
-            color="initial"
-            sx={{ fontWeight: "bold", fontSize: "12px", mt: 1 }}
-          >
-            شیوه های ارسال
-          </Typography>
-        </Grid>
+        <Option src={ShopJet} alt="shop-jet" typography="فروشگاه جت" md="1.5" />
+        <Option
+          src={HarajStyle}
+          alt="haraj-style"
+          typography="حراج استایل"
+          md="1.5"
+        />
+        <Option src={ShopPay} alt="Shop-pay" typography="شاپ پی" md="1.5" />
+        <Option src={Total} alt="total" typography="خرید عمده" md="1.5" />
+        <Option src={Coupon} alt="coupon" typography="کوله پر تخفیف" md="1.5" />
+        <Option src={Game} alt="game-net" typography="گیم نت" md="1.5" />
+        <Option
+          src={Truck}
+          alt="sending-truck"
+          typography="شیوه های ارسال"
+          md="1.5"
+        />
         <Grid
           item
           xs={4}
@@ -211,6 +69,7 @@ function SiteOptions() {
               fontSize: "46px",
               cursor: "pointer",
             }}
+            onClick={handleClickOpen}
           />
           <Typography
             variant="subtitle1"
@@ -219,6 +78,7 @@ function SiteOptions() {
           >
             بیشتر
           </Typography>
+          <MoreOptionsModal isOpen={isOpen} handleClose={handleClose} />
         </Grid>
       </Grid>
     </Container>
