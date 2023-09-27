@@ -43,7 +43,6 @@ export default function SwiperComponent() {
      style={{
       height: "300px",
      }}
-
      modules={[Navigation]}
      spaceBetween={5}
      slidesPerView={3}
@@ -93,9 +92,11 @@ export default function SwiperComponent() {
      </SwiperSlide>
      {products.map((product) => {
       return (
-       <SwiperSlide>
-        <ProductCard product={product} />
-       </SwiperSlide>
+       <React.Fragment key={product.id}>
+        <SwiperSlide>
+         <ProductCard product={product} />
+        </SwiperSlide>
+       </React.Fragment>
       );
      })}
     </Swiper>

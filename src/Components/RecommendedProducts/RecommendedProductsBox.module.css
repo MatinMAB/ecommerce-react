@@ -1,0 +1,12 @@
+.box__title {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0 8px;
+  margin-top: 8px;
+}
+.box__desc{
+  padding: 0 8px;
+font-size: 14px;
+color: #909090;
+margin: 6px 0;
+}
