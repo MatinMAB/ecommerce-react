@@ -1,5 +1,5 @@
 //React
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 // Components
 import ProductCard from "./ProductCard";
@@ -20,13 +20,16 @@ import "./SwiperComponent.css";
 // Import Images
 import Amazing from "../../images/Amazings.svg";
 
+//Redux Toolkit
+import { fetchProducts } from "../../redux/products/productsSlice";
+import { useDispatch, useSelector } from "react-redux";
+
 export default function SwiperComponent() {
- const [products, setProducts] = useState([]);
+ const { products} = useSelector((store) => store.products);
+ const dispatch = useDispatch();
+ 
  useEffect(() => {
-  fetch("https://fakestoreapi.com/products")
-   .then((response) => response.json())
-   .then((response) => setProducts(response))
-   .catch((error) => console.log(error));
+  dispatch(fetchProducts());
  }, []);
 
  return (
@@ -90,7 +93,7 @@ export default function SwiperComponent() {
        </button>
       </div>
      </SwiperSlide>
-     {products.map((product) => {
+     {products?.map((product) => {
       return (
        <React.Fragment key={product.id}>
         <SwiperSlide>

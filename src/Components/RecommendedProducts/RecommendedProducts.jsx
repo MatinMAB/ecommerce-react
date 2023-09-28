@@ -1,5 +1,5 @@
 //React
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 //Material Ui Components
 import Container from "@mui/material/Container";
@@ -8,14 +8,16 @@ import Grid from "@mui/material/Grid";
 //Components
 import RecommendedProductsBox from "./RecommendedProductsBox";
 
+//Redux Toolkit
+import { fetchProducts } from "../../redux/products/productsSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function RecommendedProducts() {
- const [products, setProducts] = useState([]);
+ const { products } = useSelector((state) => state.products);
+ const dispatch = useDispatch();
+
  useEffect(() => {
-  fetch("https://fakestoreapi.com/products")
-   .then((response) => response.json())
-   .then((response) => setProducts(response))
-   .catch((error) => console.log(error));
+  dispatch(fetchProducts());
  }, []);
 
  return (
@@ -36,7 +38,7 @@ export default function RecommendedProducts() {
       <RecommendedProductsBox
        title="لباس مردانه"
        products={products
-        .filter((product) => product.category === `men's clothing`)
+        ?.filter((product) => product.category === `men's clothing`)
         .slice(0, 4)}
       />
      </Grid>
@@ -51,7 +53,7 @@ export default function RecommendedProducts() {
       <RecommendedProductsBox
        title="جواهرات"
        products={products
-        .filter((product) => product.category === `jewelery`)
+        ?.filter((product) => product.category === `jewelery`)
         .slice(0, 4)}
       />
      </Grid>
@@ -66,7 +68,7 @@ export default function RecommendedProducts() {
       <RecommendedProductsBox
        title="لوارم دیجیتال"
        products={products
-        .filter((product) => product.category === `electronics`)
+        ?.filter((product) => product.category === `electronics`)
         .slice(0, 4)}
       />
      </Grid>
@@ -74,7 +76,7 @@ export default function RecommendedProducts() {
       <RecommendedProductsBox
        title="لباس زنانه"
        products={products
-        .filter((product) => product.category === `women's clothing`)
+        ?.filter((product) => product.category === `women's clothing`)
         .slice(0, 4)}
       />
      </Grid>
