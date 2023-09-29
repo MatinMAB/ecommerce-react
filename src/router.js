@@ -2,12 +2,16 @@
 import React from "react";
 
 //React-Router-dom
-import { createBrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 //Components
 import HomePage from "./Pages/HomePage";
 
-//routes
-export const router = createBrowserRouter([
- { path: "/", element: <HomePage /> },
-]);
+export default function Router() {
+ return (
+  <Routes>
+   <Route path="/" element={<HomePage />} />
+   <Route path="about" element={<h2>about</h2>} />
+  </Routes>
+ );
+}

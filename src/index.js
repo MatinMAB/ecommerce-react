@@ -12,10 +12,15 @@ import { Provider } from "react-redux";
 import "./index.css";
 import "./fonts.css";
 
+//React-Router-DOM
+import { BrowserRouter } from "react-router-dom";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
  <Provider store={store}>
-  <App />
+  <BrowserRouter>
+   <App />
+  </BrowserRouter>
  </Provider>
 );
 
