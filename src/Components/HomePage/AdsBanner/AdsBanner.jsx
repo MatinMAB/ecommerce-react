@@ -6,8 +6,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 //Images
-import PhoneGuard from "../../images/AdsBanner/phone-guard.jpg";
-import NoodleBanner from "../../images/AdsBanner/noodle.jpg";
+import PhoneGuard from "../../../images/AdsBanner/phone-guard.jpg";
+import NoodleBanner from "../../../images/AdsBanner/noodle.jpg";
 
 //CSS Styles
 import styles from "./AdsBanner.module.css";

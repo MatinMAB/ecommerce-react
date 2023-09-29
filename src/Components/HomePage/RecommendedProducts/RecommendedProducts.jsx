@@ -9,7 +9,7 @@ import Grid from "@mui/material/Grid";
 import RecommendedProductsBox from "./RecommendedProductsBox";
 
 //Redux Toolkit
-import { fetchProducts } from "../../redux/products/productsSlice";
+import { fetchProducts } from "../../../redux/products/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function RecommendedProducts() {

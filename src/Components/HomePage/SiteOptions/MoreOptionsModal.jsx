@@ -14,19 +14,19 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 
 //images
-import ShopJet from "../../images//SiteOptions/Shop-Jet.png";
-import Truck from "../../images/SiteOptions/truck.png";
-import ShopPay from "../../images/SiteOptions/Shop-Pay.png";
-import Game from "../../images/SiteOptions/game.png";
-import Coupon from "../../images/SiteOptions/coupon.png";
-import ShopPlus from "../../images/SiteOptions/shop-plus.png";
-import Points from "../../images/SiteOptions/points.png";
-import LuckyBox from "../../images/SiteOptions/lucky-box.png";
-import Services from "../../images/SiteOptions/services.png";
-import Local from "../../images/SiteOptions/local.png";
-import Fidibo from "../../images/SiteOptions/fidibo.png";
-import Mehr from "../../images/SiteOptions/mehr.png";
-import Pindo from "../../images/SiteOptions/pindo.png";
+import ShopJet from "../../../images//SiteOptions/Shop-Jet.png";
+import Truck from "../../../images/SiteOptions/truck.png";
+import ShopPay from "../../../images/SiteOptions/Shop-Pay.png";
+import Game from "../../../images/SiteOptions/game.png";
+import Coupon from "../../../images/SiteOptions/coupon.png";
+import ShopPlus from "../../../images/SiteOptions/shop-plus.png";
+import Points from "../../../images/SiteOptions/points.png";
+import LuckyBox from "../../../images/SiteOptions/lucky-box.png";
+import Services from "../../../images/SiteOptions/services.png";
+import Local from "../../../images/SiteOptions/local.png";
+import Fidibo from "../../../images/SiteOptions/fidibo.png";
+import Mehr from "../../../images/SiteOptions/mehr.png";
+import Pindo from "../../../images/SiteOptions/pindo.png";
 
 //components
 import Option from "./Option";

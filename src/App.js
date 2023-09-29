@@ -1,27 +1,20 @@
-import Carousel from "./Components/Carousel/CarouselComponent.jsx";
-import Navbar from "./Components/Shared/Navbar/Navbar.jsx"
-import SiteOptions from "./Components/SiteOptions/SiteOptions.jsx";
-import SwiperComponent from './Components/ProductsSwiper/SwiperComponent.jsx'
-import AdsBanner from "./Components/AdsBanner/AdsBanner.jsx";
-import RecommendedProducts from "./Components/RecommendedProducts/RecommendedProducts.jsx";
-
+//Material Ui Congigs 
 import MaterialUI from "./SetMaterialUI";
-import Footer from "./Components/Shared/Footer/Footer.jsx";
+
+//React-Router-DOM
+import { RouterProvider } from "react-router-dom";
+
+//routes
+import { router } from "./router";
 
 function App() {
-  return (
-    <>
-      <MaterialUI>
-        <Navbar/>
-        <Carousel/>
-        <SiteOptions/>
-        <SwiperComponent/>
-        <AdsBanner/>
-        <RecommendedProducts/>
-        <Footer/>
-      </MaterialUI>
-    </>
-  );
+ return (
+  <>
+   <MaterialUI>
+    <RouterProvider router={router} />
+   </MaterialUI>
+  </>
+ );
 }
 
 export default App;

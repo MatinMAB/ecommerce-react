@@ -6,13 +6,13 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Grid, Typography } from "@mui/material";
 
 //images
-import ShopJet from "../../images//SiteOptions/Shop-Jet.png";
-import Truck from "../../images/SiteOptions/truck.png";
-import Total from "../../images/SiteOptions/Total.png";
-import ShopPay from "../../images/SiteOptions/Shop-Pay.png";
-import HarajStyle from "../../images/SiteOptions/Haraj-Style.png";
-import Game from "../../images/SiteOptions/game.png";
-import Coupon from "../../images/SiteOptions/coupon.png";
+import ShopJet from "../../../images//SiteOptions/Shop-Jet.png";
+import Truck from "../../../images/SiteOptions/truck.png";
+import Total from "../../../images/SiteOptions/Total.png";
+import ShopPay from "../../../images/SiteOptions/Shop-Pay.png";
+import HarajStyle from "../../../images/SiteOptions/Haraj-Style.png";
+import Game from "../../../images/SiteOptions/game.png";
+import Coupon from "../../../images/SiteOptions/coupon.png";
 
 //Components
 import MoreOptionsModal from "./MoreOptionsModal";

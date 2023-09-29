@@ -18,10 +18,10 @@ import "swiper/css/navigation";
 import "./SwiperComponent.css";
 
 // Import Images
-import Amazing from "../../images/Amazings.svg";
+import Amazing from "../../../images/Amazings.svg";
 
 //Redux Toolkit
-import { fetchProducts } from "../../redux/products/productsSlice";
+import { fetchProducts } from "../../../redux/products/productsSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function SwiperComponent() {
