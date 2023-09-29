@@ -21,161 +21,185 @@ import MoneyIcon from "@mui/icons-material/Money";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 import InfoIcon from "@mui/icons-material/Info";
 import {
-    Accordion,
-    AccordionDetails,
-    AccordionSummary,
-    Typography,
-  } from "@mui/material";
+ Accordion,
+ AccordionDetails,
+ AccordionSummary,
+ Typography,
+} from "@mui/material";
 
 //CSS
 import styles from "./HamburgerMenu.module.css";
 
-function HamburgerMenu() {
-  const [isOpen, setIsOpen] = useState("");
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-    setIsOpen(open);
-  };
+//React-Router-DOM
+import { Link } from "react-router-dom";
 
-  return (
-    <>
-      <MenuIcon
-        onClick={toggleDrawer(true)}
-        sx={{ color: "secondary.main", cursor: "pointer" }}
-      />
-      <Drawer anchor="left" open={isOpen} onClose={toggleDrawer(false)}>
-        <Box
-          sx={{ width: 250 }}
-          role="presentation"
-          onClick={toggleDrawer("close")}
-          onKeyDown={toggleDrawer("close")}
-        >
-          <Accordion sx={{ borderBottomColor: "red" }}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="accordion-content"
-              id="accordion-header"
-            >
-              <Typography sx={{ fontSize: "14px" }} fontWeight="bold">
-                دسته&zwnj;بندی کالاها
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <ul className={styles.categoryHamburgerMenu}>
-                <li className={styles.categoryListItem}>
-                  <DiamondIcon sx={{ color: "#71008E", mr: 1 }} />
-                  <span>اکسسوری</span>
-                </li>
-                <li className={styles.categoryListItem}>
-                  <CheckroomIcon sx={{ color: "#EF7889", mr: 1 }} />
-                  <span>لباس</span>
-                </li>
-                <li className={styles.categoryListItem}>
-                  <DevicesIcon sx={{ color: "#71008E", mr: 1 }} />
-                  <span>لوازم دیجیتال</span>
-                </li>
-                <li className={styles.categoryListItem}>
-                  <WatchIcon sx={{ color: "#EF7889", mr: 1 }} />
-                  <span>ساعت</span>
-                </li>
-              </ul>
-            </AccordionDetails>
-          </Accordion>
-          <List>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <HomeIcon color="primary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={
-                    <Typography variant="caption" style={{ color: "#6e6e6e" }}>
-                      صفحه اصلی
-                    </Typography>
-                  }
-                />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ShoppingBagIcon color="secondary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={
-                    <Typography variant="caption" style={{ color: "#6e6e6e" }}>
-                      محصولات
-                    </Typography>
-                  }
-                />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <CardGiftcardIcon color="primary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={
-                    <Typography variant="caption" style={{ color: "#6e6e6e" }}>
-                      تخفیف ها و پیشنهادها
-                    </Typography>
-                  }
-                />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <MoneyIcon color="secondary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={
-                    <Typography variant="caption" style={{ color: "#6e6e6e" }}>
-                      کارت هدیه
-                    </Typography>
-                  }
-                />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <PhoneEnabledIcon color="primary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={
-                    <Typography variant="caption" style={{ color: "#6e6e6e" }}>
-                      تماس با ما
-                    </Typography>
-                  }
-                />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <InfoIcon color="secondary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={
-                    <Typography variant="caption" style={{ color: "#6e6e6e" }}>
-                      درباره ما
-                    </Typography>
-                  }
-                />
-              </ListItemButton>
-            </ListItem>
-          </List>
-        </Box>
-      </Drawer>
-    </>
-  );
+function HamburgerMenu() {
+ const [isOpen, setIsOpen] = useState("");
+ const toggleDrawer = (open) => (event) => {
+  if (
+   event.type === "keydown" &&
+   (event.key === "Tab" || event.key === "Shift")
+  ) {
+   return;
+  }
+  setIsOpen(open);
+ };
+
+ return (
+  <>
+   <MenuIcon
+    onClick={toggleDrawer(true)}
+    sx={{ color: "secondary.main", cursor: "pointer" }}
+   />
+   <Drawer anchor="left" open={isOpen} onClose={toggleDrawer(false)}>
+    <Box
+     sx={{ width: 250 }}
+     role="presentation"
+     onClick={toggleDrawer("close")}
+     onKeyDown={toggleDrawer("close")}
+    >
+     <Accordion sx={{ borderBottomColor: "red" }}>
+      <AccordionSummary
+       expandIcon={<ExpandMoreIcon />}
+       aria-controls="accordion-content"
+       id="accordion-header"
+      >
+       <Typography sx={{ fontSize: "14px" }} fontWeight="bold">
+        دسته&zwnj;بندی کالاها
+       </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+       <ul className={styles.categoryHamburgerMenu}>
+        <li className={styles.categoryListItem}>
+         <Link to="#">
+          <DiamondIcon sx={{ color: "#71008E", mr: 1 }} />
+          <span>اکسسوری</span>
+         </Link>
+        </li>
+
+        <li className={styles.categoryListItem}>
+         <Link to="#">
+          <CheckroomIcon sx={{ color: "#EF7889", mr: 1 }} />
+          <span>لباس</span>
+         </Link>
+        </li>
+        <li className={styles.categoryListItem}>
+         <Link to="#">
+          <DevicesIcon sx={{ color: "#71008E", mr: 1 }} />
+          <span>لوازم دیجیتال</span>
+         </Link>
+        </li>
+        <li className={styles.categoryListItem}>
+         <Link to="#">
+          <WatchIcon sx={{ color: "#EF7889", mr: 1 }} />
+          <span>ساعت</span>
+         </Link>
+        </li>
+       </ul>
+      </AccordionDetails>
+     </Accordion>
+     <List>
+      <ListItem disablePadding>
+       <Link to="/" style={{ textDecoration: "none", width: "100%" }}>
+        <ListItemButton>
+         <ListItemIcon>
+          <HomeIcon color="primary" />
+         </ListItemIcon>
+         <ListItemText
+          primary={
+           <Typography variant="caption" style={{ color: "#6e6e6e" }}>
+            صفحه اصلی
+           </Typography>
+          }
+         />
+        </ListItemButton>
+       </Link>
+      </ListItem>
+      <ListItem disablePadding>
+       <Link to="/products" style={{ textDecoration: "none", width: "100%" }}>
+        <ListItemButton>
+         <ListItemIcon>
+          <ShoppingBagIcon color="secondary" />
+         </ListItemIcon>
+         <ListItemText
+          primary={
+           <Typography variant="caption" style={{ color: "#6e6e6e" }}>
+            محصولات
+           </Typography>
+          }
+         />
+        </ListItemButton>
+       </Link>
+      </ListItem>
+      <ListItem disablePadding>
+       <Link to="#" style={{ textDecoration: "none", width: "100%" }}>
+        <ListItemButton>
+         <ListItemIcon>
+          <CardGiftcardIcon color="primary" />
+         </ListItemIcon>
+         <ListItemText
+          primary={
+           <Typography variant="caption" style={{ color: "#6e6e6e" }}>
+            تخفیف ها و پیشنهادها
+           </Typography>
+          }
+         />
+        </ListItemButton>
+       </Link>
+      </ListItem>
+      <ListItem disablePadding>
+       <Link to="#" style={{ textDecoration: "none", width: "100%" }}>
+        <ListItemButton>
+         <ListItemIcon>
+          <MoneyIcon color="secondary" />
+         </ListItemIcon>
+         <ListItemText
+          primary={
+           <Typography variant="caption" style={{ color: "#6e6e6e" }}>
+            کارت هدیه
+           </Typography>
+          }
+         />
+        </ListItemButton>
+       </Link>
+      </ListItem>
+      <ListItem disablePadding>
+       <Link to="#" style={{ textDecoration: "none", width: "100%" }}>
+        <ListItemButton>
+         <ListItemIcon>
+          <PhoneEnabledIcon color="primary" />
+         </ListItemIcon>
+         <ListItemText
+          primary={
+           <Typography variant="caption" style={{ color: "#6e6e6e" }}>
+            تماس با ما
+           </Typography>
+          }
+         />
+        </ListItemButton>
+       </Link>
+      </ListItem>
+      <ListItem disablePadding>
+       <Link to="#" style={{ textDecoration: "none", width: "100%" }}>
+        <ListItemButton>
+         <ListItemIcon>
+          <InfoIcon color="secondary" />
+         </ListItemIcon>
+         <ListItemText
+          primary={
+           <Typography variant="caption" style={{ color: "#6e6e6e" }}>
+            درباره ما
+           </Typography>
+          }
+         />
+        </ListItemButton>
+       </Link>
+      </ListItem>
+     </List>
+    </Box>
+   </Drawer>
+  </>
+ );
 }
 
 export default HamburgerMenu;

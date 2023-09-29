@@ -19,6 +19,9 @@ import styles from "./TopFooter.module.css";
 //Components
 import FooterServicesComponent from "./FooterServices";
 
+//React-Router-DOM
+import { Link } from "react-router-dom";
+
 const FooterServices = [
  {
   title: "امکان تحویل اکسپرس",
@@ -52,7 +55,9 @@ export default function TopFooter() {
      }}
      className={styles.flex_container}
     >
-     <img src={Logo} alt="logo" style={{ width: "80px" }} />
+     <Link to="/">
+      <img src={Logo} alt="logo" style={{ width: "80px" }} />
+     </Link>
      <p style={{ fontSize: "12px", color: "#707070" }}>
       تلفن پشتیبانی ۶۱۹۳۰۰۰۰ - ۰۲۱{" "}
       <span style={{ color: "#000000", fontWeight: "bold" }}>|</span> ۷ روز
@@ -79,7 +84,7 @@ export default function TopFooter() {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      flexWrap : 'wrap'
+      flexWrap: "wrap",
      }}
     >
      {FooterServices.map((service) => (

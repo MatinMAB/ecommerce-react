@@ -1,12 +1,16 @@
 .categoryListItem {
   font-size: 15px;
-  display: flex;
-  align-items: center;
+  
   margin: 0 0 15px;
   cursor: pointer;
 }
 .categoryListItem span {
   color: #6e6e6e;
+}
+.categoryListItem a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .categoryHamburgerMenu {

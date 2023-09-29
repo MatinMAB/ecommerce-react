@@ -11,9 +11,7 @@
   padding: 2px 5px;
   color: #787878;
   transition: all ease 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ 
   position: relative;
   font-size: 13px;
 }
@@ -25,6 +23,12 @@
   height: 1px;
   background-color: #71008e;
   transition: width ease-in-out 0.3s;
+}
+.menuListItem a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .menuListItem svg {
