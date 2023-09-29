@@ -1,0 +1,34 @@
+.footerMenu_title {
+ font-weight: bold;
+ font-size: 17px;
+ margin-bottom: 10px;
+}
+
+.footerMenu_list {
+ list-style-type: none;
+}
+
+.footerMenu_listItem {
+ color: #707070;
+ padding: 6px 0;
+ cursor: pointer;
+ font-size: 15px;
+}
+
+.flex_container {
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ column-gap: 22px;
+}
+.social_icon {
+ font-size: 36px !important;
+ color: #909090;
+ cursor: pointer;
+ transition: all ease-in-out 0.15s;
+}
+
+.social_icon:hover {
+  transition: all ease-in-out 0.15s;
+ color: #202020;
+}

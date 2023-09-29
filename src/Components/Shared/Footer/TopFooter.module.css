@@ -1,0 +1,22 @@
+.btn_go_to_up {
+ background-color: transparent;
+ border: 1px solid #202020;
+ padding: 8px 10px;
+ border-radius: 5px;
+ font-family: vazir;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ transition: all ease-in-out 0.1s;
+ cursor: pointer;
+}
+
+.btn_go_to_up:hover {
+ background-color: #e0e0e0;
+}
+
+.flex_container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}

@@ -6,6 +6,7 @@ import AdsBanner from "./Components/AdsBanner/AdsBanner.jsx";
 import RecommendedProducts from "./Components/RecommendedProducts/RecommendedProducts.jsx";
 
 import MaterialUI from "./SetMaterialUI";
+import Footer from "./Components/Shared/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <SwiperComponent/>
         <AdsBanner/>
         <RecommendedProducts/>
+        <Footer/>
       </MaterialUI>
     </>
   );
