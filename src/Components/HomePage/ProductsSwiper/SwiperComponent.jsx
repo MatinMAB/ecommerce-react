@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 
 // Components
-import ProductCard from "./ProductCard";
+import ProductCard from "../../Shared/ProductCard/ProductCard";
 
 //Material UI Components
 import Container from "@mui/material/Container";

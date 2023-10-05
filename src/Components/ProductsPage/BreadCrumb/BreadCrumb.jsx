@@ -36,37 +36,13 @@ export default function BreadCrumb() {
     <Link
      to="/products"
      className={
-      location.pathname.startsWith("/products") &&
-      !location.search.startsWith("?category")
+      location.pathname.startsWith("/products")
        ? styles.breadcrumb_active
        : styles.breadcrumb_not_active
      }
     >
      محصولات
     </Link>
-    {params.map(
-     (param) =>
-      param[0] === "category" && (
-       <>
-        <span className={styles.breadcrumb_arrow}>&gt;</span>
-        <Link
-         to={`/products?category=${param[1]}`}
-         className={
-          location.pathname.startsWith("/products") &&
-          location.search.startsWith("?category")
-           ? styles.breadcrumb_active
-           : styles.breadcrumb_not_active
-         }
-        >
-         {param[1] === "jewelery" && "جواهرات"}
-         {param[1] === "men's clothing" && "لباس مردانه"}
-         {param[1] === "women's clothing" && "لباس زنانه"}
-         {param[1] === "electronics" && "لوازم دیجیتال"}
-         {param[1] === "" && "همه"}
-        </Link>
-       </>
-      )
-    )}
    </nav>
   </Container>
  );

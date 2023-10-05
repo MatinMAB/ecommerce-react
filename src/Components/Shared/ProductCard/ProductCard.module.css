@@ -8,6 +8,15 @@
  flex-direction: column;
 }
 
+.cardBoxProducts {
+ border: 2px solid #e0e0e0;
+ box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.09);
+ transition: all ease-in-out 0.2s;
+}
+.cardBoxProducts:hover {
+ transform: scale(1.1);
+}
+
 .cardBox__img {
  padding: 20px 25px;
  width: 100%;
@@ -53,7 +62,9 @@
  color: #3f3f3f;
  background-color: #f7f7f7;
  transition: all ease-in-out 0.2s;
+ height: 40px;
 }
+
 .cardBox__addToCartBtn:hover {
  color: #f7f7f7;
  background-color: #3f3f3f;

@@ -9,9 +9,13 @@ import InventoryIcon from "@mui/icons-material/Inventory";
 //Import CSS styles
 import styles from "./ProductCard.module.css";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, itemInProductsPage }) {
  return (
-  <div className={styles.cardBox}>
+  <div
+   className={`${styles.cardBox} ${
+    itemInProductsPage && styles.cardBoxProducts
+   }`}
+  >
    <img
     src={product.image}
     alt={product.title}
